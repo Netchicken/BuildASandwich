@@ -41,7 +41,9 @@
             cbxTomato = new CheckBox();
             cbxLettuce = new CheckBox();
             cbxCarrot = new CheckBox();
-            btnBuildYourSandwich = new Button();
+            lblCheese = new Label();
+            lblTopping = new Label();
+            lblBread = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -49,9 +51,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             label1.Location = new Point(35, 22);
             label1.Name = "label1";
-            label1.Size = new Size(115, 15);
+            label1.Size = new Size(195, 25);
             label1.TabIndex = 0;
             label1.Text = "Build your Sandwich";
             // 
@@ -78,6 +81,7 @@
             rbGouda.TabStop = true;
             rbGouda.Text = "Gouda";
             rbGouda.UseVisualStyleBackColor = true;
+            rbGouda.CheckedChanged += rbGouda_CheckedChanged;
             // 
             // rbMozzarella
             // 
@@ -89,6 +93,7 @@
             rbMozzarella.TabStop = true;
             rbMozzarella.Text = "Mozzarella";
             rbMozzarella.UseVisualStyleBackColor = true;
+            rbMozzarella.CheckedChanged += rbMozzarella_CheckedChanged;
             // 
             // rbFeta
             // 
@@ -100,6 +105,7 @@
             rbFeta.TabStop = true;
             rbFeta.Text = "Feta";
             rbFeta.UseVisualStyleBackColor = true;
+            rbFeta.CheckedChanged += rbFeta_CheckedChanged;
             // 
             // groupBox2
             // 
@@ -124,6 +130,7 @@
             rbItalian.TabStop = true;
             rbItalian.Text = "Italian";
             rbItalian.UseVisualStyleBackColor = true;
+            rbItalian.CheckedChanged += rbItalian_CheckedChanged;
             // 
             // rbWhite
             // 
@@ -135,6 +142,7 @@
             rbWhite.TabStop = true;
             rbWhite.Text = "White";
             rbWhite.UseVisualStyleBackColor = true;
+            rbWhite.CheckedChanged += rbWhite_CheckedChanged;
             // 
             // rbWholemeal
             // 
@@ -146,6 +154,7 @@
             rbWholemeal.TabStop = true;
             rbWholemeal.Text = "Wholemeal";
             rbWholemeal.UseVisualStyleBackColor = true;
+            rbWholemeal.CheckedChanged += rbWholemeal_CheckedChanged;
             // 
             // cbxOlives
             // 
@@ -156,6 +165,7 @@
             cbxOlives.TabIndex = 4;
             cbxOlives.Text = "Olives";
             cbxOlives.UseVisualStyleBackColor = true;
+            cbxOlives.CheckedChanged += cbxOlives_CheckedChanged;
             // 
             // cbxTomato
             // 
@@ -166,6 +176,7 @@
             cbxTomato.TabIndex = 5;
             cbxTomato.Text = "Tomato";
             cbxTomato.UseVisualStyleBackColor = true;
+            cbxTomato.CheckedChanged += cbxTomato_CheckedChanged;
             // 
             // cbxLettuce
             // 
@@ -177,6 +188,7 @@
             cbxLettuce.Text = "Lettuce";
             cbxLettuce.TextAlign = ContentAlignment.MiddleCenter;
             cbxLettuce.UseVisualStyleBackColor = true;
+            cbxLettuce.CheckedChanged += cbxLettuce_CheckedChanged;
             // 
             // cbxCarrot
             // 
@@ -187,22 +199,43 @@
             cbxCarrot.TabIndex = 7;
             cbxCarrot.Text = "Carrot";
             cbxCarrot.UseVisualStyleBackColor = true;
+            cbxCarrot.CheckedChanged += cbxCarrot_CheckedChanged;
             // 
-            // btnBuildYourSandwich
+            // lblCheese
             // 
-            btnBuildYourSandwich.Location = new Point(160, 194);
-            btnBuildYourSandwich.Name = "btnBuildYourSandwich";
-            btnBuildYourSandwich.Size = new Size(99, 84);
-            btnBuildYourSandwich.TabIndex = 8;
-            btnBuildYourSandwich.Text = "Build your Sandwich";
-            btnBuildYourSandwich.UseVisualStyleBackColor = true;
+            lblCheese.BackColor = Color.LightBlue;
+            lblCheese.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblCheese.Location = new Point(145, 194);
+            lblCheese.Name = "lblCheese";
+            lblCheese.Size = new Size(163, 25);
+            lblCheese.TabIndex = 9;
+            // 
+            // lblTopping
+            // 
+            lblTopping.BackColor = Color.LightBlue;
+            lblTopping.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblTopping.Location = new Point(143, 263);
+            lblTopping.Name = "lblTopping";
+            lblTopping.Size = new Size(163, 51);
+            lblTopping.TabIndex = 10;
+            // 
+            // lblBread
+            // 
+            lblBread.BackColor = Color.LightBlue;
+            lblBread.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblBread.Location = new Point(143, 228);
+            lblBread.Name = "lblBread";
+            lblBread.Size = new Size(163, 25);
+            lblBread.TabIndex = 11;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(379, 454);
-            Controls.Add(btnBuildYourSandwich);
+            ClientSize = new Size(327, 323);
+            Controls.Add(lblBread);
+            Controls.Add(lblTopping);
+            Controls.Add(lblCheese);
             Controls.Add(cbxCarrot);
             Controls.Add(cbxLettuce);
             Controls.Add(cbxTomato);
@@ -235,6 +268,8 @@
         private CheckBox cbxTomato;
         private CheckBox cbxLettuce;
         private CheckBox cbxCarrot;
-        private Button btnBuildYourSandwich;
+        private Label lblCheese;
+        private Label lblTopping;
+        private Label lblBread;
     }
 }
